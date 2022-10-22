@@ -7,8 +7,7 @@ public class Main {
         contaCorrente.setSaldo(100.00);
 
         contaCorrente.depositar(50.00);
-        contaCorrente.sacar(400.00);
-        System.out.println("O seu saldo é" + contaCorrente.getSaldo());
+        contaCorrente.sacar(350.00);
 
         System.out.println("******");
 

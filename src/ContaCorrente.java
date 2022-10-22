@@ -46,12 +46,16 @@ public class ContaCorrente implements Conta {
 
     @Override
     public void sacar(Double valor) {
+
         if (valor <= 0) {
             System.out.println("Não é possível efetuar o saque. Valor indevido!");
         } else {
-            if (this.saldo + this.getChequeEspecial() > valor) {
-                this.saldo = saldo - valor;
+            double saldoTotal = getChequeEspecial() + getSaldo();
+            System.out.println(saldoTotal);
+            if (saldoTotal >= valor) {
                 System.out.println("Saque realizado com sucesso!");
+                double saldoTotalFinal = getSaldo()-valor;
+                System.out.println("Seu saldo é" + saldoTotalFinal);
             } else {
                 System.out.println("Não foi possível realizar o saque!");
             }
