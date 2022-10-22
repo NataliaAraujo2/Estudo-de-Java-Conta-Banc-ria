@@ -9,7 +9,16 @@ public class Main {
         contaCorrente.depositar(50.00);
         contaCorrente.sacar(400.00);
         System.out.println("O seu saldo é" + contaCorrente.getSaldo());
+
+        System.out.println("******");
+
+        ContaPoupanca contaPoupanca = new ContaPoupanca();
+        contaPoupanca.setNumeroContaPoupanca(1);
+        contaPoupanca.setNomeClientePoupanca("Natália");
+        contaPoupanca.setSaldoPoupanca(100.00);
+
+        contaPoupanca.depositar(50.00);
+        contaPoupanca.sacar(150.00);
+        System.out.println("O seu saldo é" + contaPoupanca.getSaldoPoupanca());
     }
-
-
 }
